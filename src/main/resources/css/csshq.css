@@ -1,0 +1,396 @@
+loginDiv {
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -150px;
+}
+
+.leftAlignedPanelGrid {
+	text-align: left;
+	!important;
+}
+
+{
+font-family
+
+
+:
+
+ 
+
+"
+Helvetica
+
+ 
+
+Neue
+
+
+"
+,
+Helvetica
+,
+Arial
+,
+sans-serif
+
+
+;
+font-size
+
+
+:
+
+ 
+
+18
+px
+
+
+;
+}
+.leftArea {
+	position: absolute;
+	left: 10px;
+	top: 100px;
+	bottom: 20px;
+	width: 260px;
+	border: solid 1px #CCCCCC;
+	overflow-y: scroll;
+}
+
+.mainArea {
+	position: absolute;
+	top: 100px;
+	bottom: 20px;
+	left: 300px;
+	/* overflow-y: scroll; */
+	width: 300px;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+li a {
+	text-decoration: none;
+	display: block;
+	color: #000000;
+	border-bottom: solid 1px #CCCCCC;
+	padding: 8px;
+}
+
+li a:hover {
+	background-color: #4B0A1E;
+	color: #BA8A92;
+}
+
+input, textarea {
+	border: 1px solid #ccc;
+	min-height: 10px;
+	outline: none;
+}
+
+.mainArea input {
+	margin-bottom: 15px;
+	margin-top: 5px;
+	width: 280px;
+}
+
+textarea {
+	margin-bottom: 15px;
+	margin-top: 5px;
+	height: 200px;
+	width: 250px;
+}
+
+label {
+	display: block;
+}
+
+button {
+	/* padding:6px; */
+	min-height: 6px;
+}
+
+.ui-button {
+	height: 30px;
+	text-align: center;
+}
+
+#searchKey {
+	width: 160px;
+}
+
+.ui-menuitem-icon-users {
+	background: url('../images/users.png') !important;
+	height: 25px;
+	width: 25px;
+	.
+	panelGridCenter
+	{
+	margin
+	:
+	0
+	auto;
+}
+
+}
+.noborder td, .noborder tr {
+	border-style: none !important;
+}
+
+.panelgrid-center {
+	margin: 0 auto;
+}
+
+right-justified {
+	text-align: right;
+}
+
+/* 
+    Document   : mfin_style
+    Created on : Dec 17, 2012, 1:09:28 PM
+    Author     : Kamal Giri
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/* ui-inputfield ui-inputtext ui-widget ui-state-default  */
+.main_links {
+	font: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	text-height: 30px;
+	color: #666;
+}
+
+.main_links a:hover {
+	font: bold;
+	font-size: 20px;
+	text-height: 40px;
+	color: green;
+	text-decoration: none;
+	color: #41967C;
+}
+
+.main_links a:active {
+	font: bold;
+	color: red;
+}
+
+#custom td.ui-selectonemenu {
+	vertical-align: top;
+}
+
+.ui-menuitem-text, label {
+	font-weight: bold;
+	color: black;
+}
+
+.ui-fieldset-content {
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+.ui-button-text, .ui-fieldset-legend {
+	text-transform: uppercase;
+}
+
+.noborder tr, .noborder td {
+	border: 0 !important;
+}
+
+#javax_faces_developmentstage_messages {
+	z-index: 1000;
+}
+
+#javax_faces_developmentstage_messages li {
+	z-index: 1000;
+}
+
+.list-row-even {
+	background: #FDFEFE !important;
+}
+
+.list-row-odd {
+	background: #ACDBEA !important;
+}
+
+.list-row-even:hover, .list-row-odd:hover {
+	
+}
+
+.ui-selectonemenu {
+	min-width: 155px ! important;
+	max-width: 155px !important;  
+	  /* to match inputtext Width */
+}
+
+.small .ui-selectonemenu {
+	min-width: 30px;
+	max-width: 40px;
+}
+
+.big .ui-selectonemenu {
+	min-width: 230px;
+	max-width: 240px;
+}
+
+.longer-select-menu {
+	max-width: 250px;
+}
+
+.ui-spinner {
+	max-width: 125px;
+}
+
+.ui-spinner .ui-spinner-input {
+	max-width: 100px;
+}
+
+.header {
+	padding-top: 5px;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bolder;
+}
+
+.alignTopPanel>tbody>tr>td {
+	vertical-align: top;
+}
+
+.verticalAlignTop>tbody>tr>td {
+	vertical-align: top !important;
+}
+
+.levelTitle {
+	padding: 6px 8px 6px 8px;
+	margin-right: 3px
+}
+
+.ui-button-text {
+	min-width: 50px;
+}
+
+/* .ui-dialog .ui-dialog-title { */
+/* 	width: 100%; */
+/* } */
+
+#slidedown-container #link-add-cirtcut {
+	background: url("../images/slide_down.png") repeat scroll 0 0
+		transparent;
+}
+
+#slidedown-container #link-show-nav-bar {
+	background: url("../images/plus2.png") repeat scroll 0 0 transparent;
+}
+
+#slidedown-container {
+	overflow: hidden;
+	position: absolute;
+	right: -4px;
+	top: 0;
+	z-index: 999;
+	top: -5px;
+}
+
+#slidedown-container a {
+	float: left;
+	height: 28px;
+	width: 28px;
+	position: relative;
+}
+
+.top {
+	filter: alpha(opacity = 80);
+	opacity: 0.8;
+	padding: 50px 0 0 50px;
+	z-index: 99;
+}
+
+.shortcut-datatable .ui-state-disabled {
+	opacity: 1;
+}
+
+.remove-line .ui-datatable-data td {
+	border: none 0px !important;
+}
+
+.very-short .ui-button-text {
+	min-width: 10px;
+	padding: 0.4em .4em !important;
+	margin: 0;
+}
+
+.ellipsis {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 400px;
+	vertical-align: bottom;
+}
+
+.ui-selectoneradio td, .ui-selectoneradio tr {
+	border-style: none !important
+}
+
+.ui-panelgrid td, .ui-panelgrid tr {
+	border-style: none !important
+}
+
+.ui-widget, .ui-widget .ui-widget .ui-menuitem-text .td .ui-column-title
+	{
+	font-size: 12px !important;
+}
+
+.background_green {
+	color: #00cc00;
+}
+
+.background_blue {
+	background-color: #879fd9;
+}
+
+.actionButtonInTableRow.ui-button {
+	height: 16px;
+	text-align: center;
+}
+
+body {
+	margin: 0px !important;
+}
+
+.mydiv {
+	background-color: #C4C4C4;
+	height: 30px;
+	/*background: transparent;*/
+}
+.btnPdfView {
+ 
+background: url('../images/pdf.png') !important;
+ 
+}
+
+.actionButtonInTableRowForPdf.ui-button {
+	height: 19px;
+	text-align: center;
+	width: 18px;
+}
+.adjustPosition
+{
+	padding-left: 8px !important;
+    padding-right: 22px !important;
+}
+.ui-selectonemenu-label
+{
+	width: 90% !important;
+}
+.ui-selectonemenu{
+padding-right: 0em !important;	
+}
+

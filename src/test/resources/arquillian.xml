@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+	<container qualifier="arquillian-openshift-express">
+	    <configuration>
+        <property name="namespace">yayayokohojee</property>
+        <property name="application">jbosswildflydemo</property>
+        <property name="sshUserName">556d7dab4382eca6d7000116</property>
+        <property name="passphrase">sIt3iRHSuubi</property>
+        <property name="login">yayayokoho3@gmail.com</property>
+    </configuration>
+	</container>
+</arquillian>

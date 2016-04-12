@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet library="css" name="csshq.css" />
+</h:head>
+<h:body>
+	<ui:composition>
+		<h:form id="formMenu">
+			<p:menubar>
+			<p:menuitem value="Users" url="/pages/users.xhtml?faces-redirect=true"/>
+				<p:menuitem id="logoutMenuItem" value="Logout"
+					action="#{loginController.logout}" icon="ui-icon-power" />
+			</p:menubar>
+		<h:panelGrid style="float:auto; color: black; position: absolute; top: 13px; right:16px; " columns="1">
+        <h:panelGroup style="font-size: 16px; text-transform: capitalize;">
+             <p:outputLabel id="userLabel" value="LoggedIn:#{not empty sessionController.currentSessionUser ? sessionController.currentSessionUser.fullName: 'Anonymous' }" />  
+         <p:overlayPanel id="userContextMenu" for="userLabel" hideEffect="fade" style="float:left !important;">
+         <p:commandButton id="logoutButton" title="Logout" action="#{loginController.logout}" 
+            ajax="false"  value="#{bundle.logout}" icon="ui-icon-power" />
+         </p:overlayPanel>
+        </h:panelGroup>
+        </h:panelGrid>
+		</h:form>
+	</ui:composition>
+</h:body>
+</html>

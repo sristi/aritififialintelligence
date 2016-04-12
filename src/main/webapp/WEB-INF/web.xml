@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         metadata-complete="false">
+ <welcome-file-list>
+         	<welcome-file>index.xhtml</welcome-file>
+         </welcome-file-list>
+         <servlet>
+        <servlet-name>faces</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>faces</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <error-page>
+		<error-code>404</error-code>
+		<location>/resourcenotfound.xhtml</location>
+	</error-page>
+	<!-- <error-page>
+		<error-code>500</error-code>
+		<location>/servererror.xhtml</location>
+	</error-page> -->
+	<error-page>
+        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+        <location>/sessiontimeout.xhtml</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.persistence.NoResultException</exception-type>
+        <location>/databaserelatedexception.xhtml</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.ejb.EJBException</exception-type>
+        <location>/databaserelatedexception.xhtml</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.servlet.ServletException</exception-type>
+        <location>/databaserelatedexception.xhtml</location>
+    </error-page>
+    <!-- <error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/langerror.xhtml</location>
+	</error-page> -->
+         
+</web-app>
+

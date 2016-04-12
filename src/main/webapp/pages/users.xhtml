@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<f:metadata>
+</f:metadata>
+    <ui:composition template="/pages/template/template.xhtml">
+	<ui:define name="pagetitle">User Management</ui:define>
+	<ui:define name="divview">
+		<p:commandButton icon="ui-icon-refresh" title="#{bundle.filterDatatable}"/>		
+		<p:commandButton icon="#{buttonBundle.createIcon}"
+			styleClass="actionButtonInTableRow"
+			action="#{userController.prepareCreate}"
+			title="#{buttonBundle.createTitle}"
+			oncomplete="PF('createUserDlg').show();"
+			update=":growlMessage" />
+	</ui:define>
+	<ui:define name="divMain">
+		<h:form id="formMain">
+			<p:dataTable id="table" value="#{userController.lazyModel}"
+				widgetVar="DataTableList" var="item" rowIndexVar="row"
+				paginator="true" rows="5" lazy="true" paginatorPosition="bottom"
+				selectionMode="single" selection="#{userController.selected}"
+				rowKey="#{item.id}"
+				currentPageReportTemplate="#{dataTableBundle.page_report_template}"
+				paginatorTemplate="#{dataTableBundle.paginator_template}"
+				rowsPerPageTemplate="#{dataTableBundle.rows_per_page_template}">
+				
+				
+				<p:column headerText="#" width="15">
+					<h:outputText value="#{row+1}" />
+				</p:column>
+				<p:column headerText="#{bundle.fullname}"
+					filterBy="#{item.fullName}" filterMatchMode="begins"
+					sortBy="#{item.fullName}">
+					<h:outputText value="#{item.fullName}" />
+				</p:column>
+				
+				<p:column headerText="#{bundle.userName}"
+					filterBy="#{item.userName}" filterMatchMode="begins"
+					sortBy="#{item.userName}">
+					<h:outputText value="#{item.userName}" />
+				</p:column>
+				
+			</p:dataTable>
+		</h:form>
+		
+		<p:dialog id="createUser" header="#{bundle.createUser}"
+			widgetVar="createUserDlg" hideEffect="explode" showEffect="explode"
+			resizable="false">
+			<h:form id="creteUserForm">
+
+				<p:panelGrid columns="3" id="createPanel" styleClass="noborder">
+
+					<h:outputLabel for="fullname" value="#{bundle.fullname}" />
+					<p:inputText id="fullname" label="#{bundle.fullname}"
+						value="#{userController.selected.fullName}" required="true" />
+					<p:message for="fullname" id="messageFullName"></p:message>
+
+					<h:outputLabel for="userName" value="#{bundle.userName}" />
+					<p:inputText id="userName" label="#{bundle.userName}"
+						value="#{userController.selected.userName}" required="true" />
+					<p:message for="userName" id="messageUserName"></p:message>
+
+					<h:outputLabel for="password" value="#{bundle.password}" />
+					<p:password id="password" label="#{bundle.password}"
+						value="#{userController.selected.password}" required="true">
+					</p:password>
+					<p:message for="password" id="messagePassword"></p:message>
+
+					<p:row style="display:block; text-align:right;"
+						styleClass="noborder">
+						<p:column colspan="2">
+							<p:commandButton value="#{bundle.save}"
+								action="#{userController.addUser()}"
+								oncomplete="if (args &amp;&amp; !args.validationFailed) PF('createUserDlg').hide();"
+								update=":formMain:table messageUserName  messageFullName messagePassword" />
+							<p:commandButton value="#{bundle.cancel}" immediate="true"
+								oncomplete="PF('createUserDlg').hide();" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</h:form>
+		</p:dialog>
+		<h:outputStylesheet library="css" name="csshq.css" />
+	</ui:define>
+</ui:composition>
+</html>

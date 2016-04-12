@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/pages/template/template.xhtml">
+	<ui:define name="pagetitle">welcome</ui:define>
+	<ui:define name="divMain">
+		<h:form>
+			<h3>Welcome to my dummy System on RH-Cloud</h3>
+			<p>Tenologies used for this dummy web app</p>
+			<ul>
+				<li>javaee-api 7.0</li>
+				<li>primefaces 5.0</li>
+				<li>jsf 2.2</li>
+				<li>CDI 1.2</li>
+				<li>WebSockets</li>
+				<li>JAX-RS</li>
+				<li>maven 3</li>
+				<li>git</li>
+				<li>mysql server 5.1</li>
+				<li>openshift</li>
+				<li>jpa 2.1</li>
+				<li>hibernate 4.3.8</li>
+			</ul>
+			<p>The dummy web services are can be tested at
+				http://jbosswildflydemo-yayayokohojee.rhcloud.com/ws/</p> eg.
+	<br />
+			<a
+				href="http://jbosswildflydemo-yayayokohojee.rhcloud.com/ws/sayHello">HELLO
+				WORLD WS</a>
+			<br />
+			<a href="http://jbosswildflydemo-yayayokohojee.rhcloud.com/ws/users/">Dummy
+				Users WS</a>
+			<br />
+			<a
+				href="http://jbosswildflydemo-yayayokohojee.rhcloud.com/ws/users/1">Dummy
+				Users WS for user with id=1</a>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
